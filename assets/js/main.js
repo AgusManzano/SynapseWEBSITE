@@ -187,4 +187,41 @@
 				}
 			});
 
+	// New animations and dynamic effects
+		$('.fade-up').scrollex({
+			mode: 'middle',
+			top: '-20vh',
+			bottom: '-20vh',
+			initialize: function() {
+				$(this).addClass('inactive');
+			},
+			enter: function() {
+				$(this).removeClass('inactive');
+			}
+		});
+
+		$('.fade-down').scrollex({
+			mode: 'middle',
+			top: '-20vh',
+			bottom: '-20vh',
+			initialize: function() {
+				$(this).addClass('inactive');
+			},
+			enter: function() {
+				$(this).removeClass('inactive');
+			}
+		});
+
+		$('.fade').scrollex({
+			mode: 'middle',
+			top: '-20vh',
+			bottom: '-20vh',
+			initialize: function() {
+				$(this).addClass('inactive');
+			},
+			enter: function() {
+				$(this).removeClass('inactive');
+			}
+		});
+
 })(jQuery);
