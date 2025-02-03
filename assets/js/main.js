@@ -224,4 +224,26 @@
 			}
 		});
 
+	// Configure the contact form to send data to Formspree
+		$('form').on('submit', function(event) {
+			event.preventDefault();
+
+			var $form = $(this),
+				url = $form.attr('action'),
+				data = $form.serialize();
+
+			$.ajax({
+				type: 'POST',
+				url: url,
+				data: data,
+				dataType: 'json',
+				success: function() {
+					alert('Mensaje enviado con éxito.');
+				},
+				error: function() {
+					alert('Hubo un error al enviar el mensaje.');
+				}
+			});
+		});
+
 })(jQuery);
